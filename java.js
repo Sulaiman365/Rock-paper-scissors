@@ -32,8 +32,6 @@ alert("You:"+playerScore+" : "+computerScore+":Computer");
 }
 else if (computerSelection==='Scissors' && playerSelection.toUpperCase() === 'SCISSORS')
 {
-    playerScore++;
-    computerScore++;
 console.log("Draw!");
 console.log("You:"+playerScore+" : "+computerScore+":Computer");
 alert("Draw!");
@@ -41,8 +39,6 @@ alert("You:"+playerScore+" : "+computerScore+":Computer");
 }
 else if (computerSelection==='Paper' && playerSelection.toUpperCase() === 'PAPER')
 {
-    playerScore++;
-    computerScore++;
 console.log("Draw!");
 console.log("You:"+playerScore+" : "+computerScore+":Computer");
 alert("Draw!");
@@ -66,8 +62,6 @@ alert("You:"+playerScore+" : "+computerScore+":Computer");
 }
 else if (computerSelection==='Rock' && playerSelection.toUpperCase() === 'ROCK')
 {
-    playerScore++;
-    computerScore++;
 console.log("Draw!");
 console.log("You:"+playerScore+" : "+computerScore+":Computer");
 alert("Draw!");
