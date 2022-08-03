@@ -3,9 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="java.js" defer></script>
     </head>
     <body>
-     
-      <script src="java.js"></script>
+      <h1 class="header">Rock Paper Scissors</h1>
+      <div id="choice">Choose</div>
+      <div id="player">
+        <button class="rock" value="1">🪨</button>
+        <button class="paper" value="2">
+          🧻
+        </button>
+        <button class="scissors" value="3">
+          ✂️
+        </button>
+      </div>
+      <div id="result">
+        <div class="playerResult">
+          <div class="human">👨</div>
+          <div class="humanText">Player: </div>
+        </div>
+        <div class="compResult">
+          <div class="human">🤖</div>
+          <div class="compText">Computer: </div>
+        </div>
+      </div>
+      <div id="winner">winner</div>
+      <div id="footer">© Sulaiman 2022</div>
     </body>
 </html>

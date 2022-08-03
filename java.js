@@ -17,103 +17,202 @@ function playRound (playerSelection,computerSelection)
 if (computerSelection==='Scissors' && playerSelection.toUpperCase() === 'ROCK')
 {
 playerScore ++;
-console.log("You Win! Rock beats Scissors");
-console.log("You:"+playerScore+" : "+computerScore+":Computer");
-alert("You Win! Rock beats Scissors");
-alert("You:"+playerScore+" : "+computerScore+":Computer");
 }
 else if (computerSelection==='Scissors' && playerSelection.toUpperCase() === 'PAPER')
 {
 computerScore ++;
-console.log("You Lose! Scissors beats Paper");
-console.log("You:"+playerScore+" : "+computerScore+":Computer");
-alert("You Lose! Scissors beats Paper");
-alert("You:"+playerScore+" : "+computerScore+":Computer");
 }
 else if (computerSelection==='Scissors' && playerSelection.toUpperCase() === 'SCISSORS')
 {
-console.log("Draw!");
-console.log("You:"+playerScore+" : "+computerScore+":Computer");
-alert("Draw!");
-alert("You:"+playerScore+" : "+computerScore+":Computer");
+playerScore = playerScore;
+computerScore = computerScore;
 }
 else if (computerSelection==='Paper' && playerSelection.toUpperCase() === 'PAPER')
 {
-console.log("Draw!");
-console.log("You:"+playerScore+" : "+computerScore+":Computer");
-alert("Draw!");
-alert("You:"+playerScore+" : "+computerScore+":Computer");
+playerScore = playerScore;
+computerScore = computerScore;
 }
 else if (computerSelection==='Paper' && playerSelection.toUpperCase() === 'SCISSORS')
 {
 playerScore++;
-console.log("You Win!  Scissors beats  Paper");
-console.log("You:"+playerScore+" : "+computerScore+":Computer");
-alert("You Win!  Scissors beats  Paper");
-alert("You:"+playerScore+" : "+computerScore+":Computer");
 }
 else if (computerSelection==='Paper' && playerSelection.toUpperCase() === 'ROCK')
 {
 computerScore++;
-console.log("You Lose!  Paper beats  Rock");
-console.log("You:"+playerScore+" : "+computerScore+":Computer");
-alert("You Lose!  Paper beats  Rock");
-alert("You:"+playerScore+" : "+computerScore+":Computer");
 }
 else if (computerSelection==='Rock' && playerSelection.toUpperCase() === 'ROCK')
 {
-console.log("Draw!");
-console.log("You:"+playerScore+" : "+computerScore+":Computer");
-alert("Draw!");
-alert("You:"+playerScore+" : "+computerScore+":Computer");
+playerScore = playerScore;
+computerScore = computerScore;
 }
 else if (computerSelection==='Rock' && playerSelection.toUpperCase() === 'SCISSORS')
 {
 computerScore++;
-console.log("You Lose! Rock beats Scissors");
-console.log("You:"+playerScore+" : "+computerScore+":Computer");
-alert("You Lose! Rock beats Scissors");
-alert("You:"+playerScore+" : "+computerScore+":Computer");
 }
 else if (computerSelection==='Rock' && playerSelection.toUpperCase() === 'PAPER')
 {
 playerScore++;
-console.log("You Win! Paper beats Rock");
-console.log("You:"+playerScore+" : "+computerScore+":Computer");
-alert("You Win! Paper beats Rock");
-alert("You:"+playerScore+" : "+computerScore+":Computer");
 }
 
 }
-function game()
-{
-   for (let i = 0; i < 5; i++){
-const computerSelection = getComputerChoice ();
-const playerSelection = prompt("Please enter your choice.");
-if (playerSelection.toUpperCase() ==='PAPER' || playerSelection.toUpperCase() === 'SCISSORS' || playerSelection.toUpperCase() === 'ROCK')
-{
-playRound(playerSelection,computerSelection);
-}
-else
-{
-    console.log("Please enter Rock, Paper or Scissors only.");
-    alert("Please enter Rock, Paper or Scissors only.");
-    i--;
-}
-}
-}
-game();
-if (playerScore > computerScore)
-{
-console.log("Humanity has been saved");
-alert("Humanity has been saved");
-}
-else if (playerScore == computerScore)
-{
-    console.log("Draw! You live to fight another day!");
-    alert("Draw! You live to fight another day!");
-}
-else{
-    console.log("Machines have colonized the world!");
-    alert("Machines have colonized the world!");
-}
+
+    //for(i=1;i<=5;i++)
+    //{
+    
+       let playerSelection;
+       const compText = document.querySelector('.compText');
+       const humanText = document.querySelector('.humanText');
+       const btnRock = document.querySelector('.rock');
+       const winner = document.querySelector('#winner');
+
+        btnRock.addEventListener('click',() => {
+        playerSelection = "rock";
+        computerSelection = getComputerChoice();
+        playRound(playerSelection,computerSelection);
+        humanText.textContent = `Player:\n${playerScore}`;
+        compText.textContent = `Computer: ${computerScore}`;
+        if (computerSelection ==="Rock")
+        {
+            winner.textContent = `Draw!`; 
+        }
+        else if (computerSelection ==="Paper")
+        {
+            winner.textContent = `You lose: Paper beats Rock`; 
+        }
+        else if (computerSelection ==="Scissors")
+        {
+            winner.textContent = `You win: Rock beats Scissors`; 
+        }
+        if (playerScore==5 || computerScore==5)
+        {
+            if (playerScore>computerScore)
+            {
+                winner.textContent = `👨 WINS`;
+                playerScore = 0;
+                computerScore=0;
+                
+            }
+            else if (computerScore>playerScore)
+            {
+                winner.textContent = `🤖 WINS`;
+                playerScore = 0;
+                computerScore=0;
+               
+            }
+            
+        }
+        })
+        
+        const btnPaper = document.querySelector('.paper');
+        begin: btnPaper.addEventListener('click',() => {
+        playerSelection = "paper";
+        computerSelection = getComputerChoice();
+        playRound(playerSelection,computerSelection);
+        humanText.textContent = `Player:\n${playerScore}`;
+        compText.textContent = `Computer: ${computerScore}`;
+        if (computerSelection ==="Paper")
+        {
+            winner.textContent = `Draw!`; 
+        }
+        else if (computerSelection ==="Scissors")
+        {
+            winner.textContent = `You lose: Scissors beats Paper`; 
+        }
+        else if (computerSelection ==="Rock")
+        {
+            winner.textContent = `You win: Paper beats Rock`; 
+        }
+        if (playerScore==5 || computerScore==5)
+        {
+            if (playerScore>computerScore)
+            {
+                winner.textContent = `👨 WINS`;
+                 
+                playerScore = 0;
+                computerScore=0;
+                
+            }
+            else if (computerScore>playerScore)
+            {
+                winner.textContent = `🤖 WINS`;
+                
+                playerScore = 0;
+                computerScore=0;
+                
+            }
+            
+        }
+        })
+        const btnScissors = document.querySelector('.scissors');
+        btnScissors.addEventListener('click',() => {
+        playerSelection = "scissors";
+        computerSelection = getComputerChoice();
+        playRound(playerSelection,computerSelection);
+        humanText.textContent = `Player:\n${playerScore}`;
+        compText.textContent = `Computer: ${computerScore}`;
+        if (computerSelection ==="Scissors")
+        {
+            winner.textContent = `Draw!`; 
+        }
+        else if (computerSelection ==="Rock")
+        {
+            winner.textContent = `You lose: Rock beats Scissors`; 
+        }
+        else if (computerSelection ==="Paper")
+        {
+            winner.textContent = `You win: Scissors beats Paper`; 
+        }
+        if (playerScore==5 || computerScore==5)
+        {
+            if (playerScore>computerScore)
+            {
+                winner.textContent = `👨 WINS`;
+                
+                playerScore = 0;
+                computerScore=0;
+                
+            }
+            else if (computerScore>playerScore)
+            {
+                winner.textContent = `🤖 WINS`;
+                
+                playerScore = 0;
+                computerScore=0;
+                
+            }
+            
+        }
+        })
+
+        //playRound(playerSelection,computerSelection)
+    //}
+
+
+//const computerSelection = getComputerChoice ();
+//const playerSelection = prompt("Please enter your choice.");
+//if (playerSelection.toUpperCase() ==='PAPER' || playerSelection.toUpperCase() === 'SCISSORS' || playerSelection.toUpperCase() === 'ROCK')
+//{
+//playRound(playerSelection,computerSelection);
+//}
+//else
+//{
+//    console.log("Please enter Rock, Paper or Scissors only.");
+//    alert("Please enter Rock, Paper or Scissors only.");
+//    i--;
+//}
+
+
+//if (playerScore > computerScore)
+//{
+//console.log("Humanity has been saved");
+//alert("Humanity has been saved");
+//}
+//else if (playerScore == computerScore)
+//{
+//    console.log("Draw! You live to fight another day!");
+//    alert("Draw! You live to fight another day!");
+//}
+//else{
+//    console.log("Machines have colonized the world!");
+//    alert("Machines have colonized the world!");
+//}
