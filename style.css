@@ -127,13 +127,7 @@ html {
     justify-content: center;
     text-align: center;
   }
-  .start
-  {
-    max-width: fit-content;
-    
-    font-size: 40px;
-    margin-right: 10px;
-  }
+  
   .reset
   {
     max-width: fit-content;

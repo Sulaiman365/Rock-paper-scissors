@@ -60,8 +60,8 @@ const compText = document.querySelector('.compText');
 const humanText = document.querySelector('.humanText');
 const winner = document.querySelector('#winner');
 
-start.addEventListener('click',() => { 
-    winner.textContent = `START`;   
+
+       winner.textContent = `START`;   
        let playerSelection;
        
        const btnRock = document.querySelector('.rock');
@@ -185,7 +185,7 @@ start.addEventListener('click',() => {
         }
         })
 
-    })
+    
     const reset = document.querySelector('.reset');
 
        reset.addEventListener('click',() => {
