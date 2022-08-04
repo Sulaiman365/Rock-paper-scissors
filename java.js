@@ -55,14 +55,17 @@ playerScore++;
 }
 
 }
+const start = document.querySelector('.start');
+const compText = document.querySelector('.compText');
+const humanText = document.querySelector('.humanText');
+const winner = document.querySelector('#winner');
 
-    
+start.addEventListener('click',() => { 
+    winner.textContent = `START`;   
        let playerSelection;
-       const compText = document.querySelector('.compText');
-       const humanText = document.querySelector('.humanText');
+       
        const btnRock = document.querySelector('.rock');
-       const winner = document.querySelector('#winner');
-
+       
         btnRock.addEventListener('click',() => {
         playerSelection = "rock";
         computerSelection = getComputerChoice();
@@ -181,3 +184,14 @@ playerScore++;
             
         }
         })
+
+    })
+    const reset = document.querySelector('.reset');
+
+       reset.addEventListener('click',() => {
+        playerScore=0;
+        computerScore=0;
+        humanText.textContent = `Player:\n${playerScore}`;
+        compText.textContent = `Computer: ${computerScore}`;
+        winner.textContent = `RESET`;
+       })
