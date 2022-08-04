@@ -56,8 +56,6 @@ playerScore++;
 
 }
 
-    //for(i=1;i<=5;i++)
-    //{
     
        let playerSelection;
        const compText = document.querySelector('.compText');
@@ -183,36 +181,3 @@ playerScore++;
             
         }
         })
-
-        //playRound(playerSelection,computerSelection)
-    //}
-
-
-//const computerSelection = getComputerChoice ();
-//const playerSelection = prompt("Please enter your choice.");
-//if (playerSelection.toUpperCase() ==='PAPER' || playerSelection.toUpperCase() === 'SCISSORS' || playerSelection.toUpperCase() === 'ROCK')
-//{
-//playRound(playerSelection,computerSelection);
-//}
-//else
-//{
-//    console.log("Please enter Rock, Paper or Scissors only.");
-//    alert("Please enter Rock, Paper or Scissors only.");
-//    i--;
-//}
-
-
-//if (playerScore > computerScore)
-//{
-//console.log("Humanity has been saved");
-//alert("Humanity has been saved");
-//}
-//else if (playerScore == computerScore)
-//{
-//    console.log("Draw! You live to fight another day!");
-//    alert("Draw! You live to fight another day!");
-//}
-//else{
-//    console.log("Machines have colonized the world!");
-//    alert("Machines have colonized the world!");
-//}
