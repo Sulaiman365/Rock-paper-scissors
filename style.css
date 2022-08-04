@@ -1,0 +1,127 @@
+html {
+    background-color: grey;
+  }
+  
+  .header
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    font-size: 42px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(68, 66, 66);
+  }
+  #choice
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: auto;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: white;
+    font-size: 42px;
+  }
+  #player
+  {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    
+  }
+  .rock
+  {
+    max-width: fit-content;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 60px;
+    border-radius: 50%;
+    padding: 0;
+    background-color: rgb(68, 66, 66);
+    border-style: solid;
+    border-color: white;
+  }
+  .paper
+  {
+    max-width: fit-content;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 60px;
+    border-radius: 50%;
+    padding: 0;
+    background-color: rgb(68, 66, 66);
+    border-style: solid;
+    border-color: white;
+  }
+  
+  .scissors
+  {
+    max-width: fit-content;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 45px;
+    border-radius: 50%;
+    padding: 0;
+    background-color: rgb(68, 66, 66);
+    border-style: solid;
+    border-color: white;
+  }
+  #result
+  {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 200px;
+    margin-top: 70px;
+    background-color: rgb(68, 66, 66);
+    margin-left: 500px;
+    margin-right: 500px;
+    
+  }
+  .playerResult
+  {
+    max-width: 150px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 45px; 
+
+  }
+  .compResult
+  {
+    max-width: 200px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 45px; 
+  }
+  .humanText,.compText
+  {
+    color: white;
+  }
+
+  #winner
+  {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 70px;
+    font-size: 45px;
+    color: white;
+  }
+  #footer
+  {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+  }
+  
+  
+  
