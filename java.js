@@ -138,8 +138,7 @@ const winner = document.querySelector('#winner');
                 winner.textContent = `🤖 WINS`;
                 
                 playerScore = 0;
-                computerScore=0;
-                
+                computerScore=0;    
             }
             
         }
